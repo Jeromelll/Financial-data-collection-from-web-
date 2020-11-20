@@ -1,14 +1,12 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sun Apr 21 16:02:00 2019
-下载所有的PDF
-@author: herr_kun
-"""
-
-#!/usr/bin/python
-# coding = utf-8
-# __author__='Lilly'
 # description:下载csv中列出的pdf年报
+
+'''
+下载前要对csv文件做一些调整：
+1.公告标题里的英文引号要去掉
+2.下载地址里的www替换为static
+'''
+
 
 import csv
 import os
@@ -56,7 +54,5 @@ def download_pdf(path,MAX_COUNT = 5):
 
 
 if __name__ == '__main__':
-    #DST_DIR = r'D:\XML\wyk年度报告/'
-    LIST_FILE = r'D:\XML\wyk年度报告/part_data_wyk.csv'    
+    LIST_FILE = r'D:\Documents\我的坚果云\PyLearn\A股负向舆情报告2020/工作簿1.csv'
     download_pdf(LIST_FILE)
-    
